@@ -1264,7 +1264,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d9837a;
+  background: #beb6ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2754,7 +2754,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
 }
 .site-author-image {
   border: 2px solid rgba(0,0,0,0.25);
