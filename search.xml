@@ -13,6 +13,21 @@
       </tags>
   </entry>
   <entry>
+    <title>可解释人工智能概述</title>
+    <url>/posts/d59c5c61/</url>
+    <content><![CDATA[<p>Chapter1 《可解释人工智能导论》学习笔记</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+        <tag>AI</tag>
+        <tag>overview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>希腊神话游观</title>
     <url>/posts/68913bca/</url>
     <content><![CDATA[<p>打开了一扇窗户而向花园里窥看着时，还有不想跑进去游观的吗?</p>
@@ -164,21 +179,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>oss</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>可解释人工智能概述</title>
-    <url>/posts/d59c5c61/</url>
-    <content><![CDATA[<p>Chapter1 《可解释人工智能导论》学习笔记</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>note</tag>
-        <tag>AI</tag>
-        <tag>overview</tag>
       </tags>
   </entry>
 </search>
