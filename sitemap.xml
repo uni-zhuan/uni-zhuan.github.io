@@ -65,7 +65,14 @@
 
   
   <url>
-    <loc>http://uni-zhuan.github.io/tags/Japanese/</loc>
+    <loc>http://uni-zhuan.github.io/tags/AI/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/overview/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -73,6 +80,13 @@
   
   <url>
     <loc>http://uni-zhuan.github.io/tags/note/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/Japanese/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -87,20 +101,6 @@
   
   <url>
     <loc>http://uni-zhuan.github.io/tags/books/</loc>
-    <lastmod>2022-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/AI/</loc>
-    <lastmod>2022-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/overview/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -123,6 +123,13 @@
 
   
   <url>
+    <loc>http://uni-zhuan.github.io/categories/AI/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://uni-zhuan.github.io/categories/%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -131,13 +138,6 @@
   
   <url>
     <loc>http://uni-zhuan.github.io/categories/%E6%96%87%E5%AD%A6/</loc>
-    <lastmod>2022-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/categories/AI/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
