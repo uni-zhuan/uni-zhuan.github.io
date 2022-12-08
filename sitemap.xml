@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://uni-zhuan.github.io/posts/d59c5c61/</loc>
+    
+    <lastmod>2022-12-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://uni-zhuan.github.io/posts/68913bca/</loc>
     
     <lastmod>2022-12-08</lastmod>
@@ -97,6 +106,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/AI/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/overview/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -115,6 +138,13 @@
   
   <url>
     <loc>http://uni-zhuan.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/categories/AI/</loc>
     <lastmod>2022-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
