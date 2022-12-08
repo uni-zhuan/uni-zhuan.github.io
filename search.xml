@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>単語ノート</title>
+    <url>/posts/7f5eba3a/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>语言</category>
+      </categories>
+      <tags>
+        <tag>Japanese</tag>
+        <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>可解释人工智能概述</title>
     <url>/posts/d59c5c61/</url>
     <content><![CDATA[<p>Chapter1 《可解释人工智能导论》学习笔记</p>
@@ -10,21 +22,9 @@
         <category>AI</category>
       </categories>
       <tags>
+        <tag>note</tag>
         <tag>AI</tag>
         <tag>overview</tag>
-        <tag>note</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>単語ノート</title>
-    <url>/posts/7f5eba3a/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>语言</category>
-      </categories>
-      <tags>
-        <tag>note</tag>
-        <tag>Japanese</tag>
       </tags>
   </entry>
   <entry>
