@@ -195,7 +195,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/1510c780/" class="post-title-link" itemprop="url">取样算法调研</a>
+            <a href="/posts/1510c780/" class="post-title-link" itemprop="url">采样算法调研</a>
         </h2>
 
         <div class="post-meta">
@@ -206,7 +206,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-12-11 00:07:40 / 修改时间：00:17:24" itemprop="dateCreated datePublished" datetime="2022-12-11T00:07:40+08:00">2022-12-11</time>
+              <time title="创建时间：2022-12-11 00:07:40 / 修改时间：00:25:45" itemprop="dateCreated datePublished" datetime="2022-12-11T00:07:40+08:00">2022-12-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,50 +229,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="取样算法"><a href="#取样算法" class="headerlink" title="取样算法"></a>取样算法</h1><h2 id="Uniform-Random-Sampling-均匀随机取样"><a href="#Uniform-Random-Sampling-均匀随机取样" class="headerlink" title="Uniform Random Sampling 均匀随机取样"></a>Uniform Random Sampling 均匀随机取样</h2><p>生成[0,1]之间的伪随机数序列equal to均匀分布</p>
-<h2 id="Low-Discrepancy-Sampling-低差异取样"><a href="#Low-Discrepancy-Sampling-低差异取样" class="headerlink" title="Low-Discrepancy Sampling 低差异取样"></a>Low-Discrepancy Sampling 低差异取样</h2><h3 id="Discrepancy（差异值）"><a href="#Discrepancy（差异值）" class="headerlink" title="Discrepancy（差异值）"></a>Discrepancy（差异值）</h3><p>衡量采样序列质量，描述采样点在采样空间内分布的均匀程度<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-15-58-43.png"></p>
-<p>$ D_N(P)&#x3D;\sup _{B\in J}|\frac{A(B)}{N}-\lambda_s(B)|$<br>对于一个在$[0,1]^n$空间中的点集，任意选取一个空间中的区域$B$，此区域内点的数量$A$和点集个数的总量$N$的比值和此区域的体积$\lambda_s$的差的绝对值的最大值，就是这个点集的Discrepancy。分布越均匀的点集，任意区域内的点集数量占点总数量的比例也会越接近于这个区域的体积。</p>
-<h3 id="LHS-x2F-Latin-hypercube-sampling算法"><a href="#LHS-x2F-Latin-hypercube-sampling算法" class="headerlink" title="LHS&#x2F;Latin hypercube sampling算法"></a>LHS&#x2F;Latin hypercube sampling算法</h3><p>多维算法，需要将采样空间按照维度进行分层。假设现在要采样$N$个点, LHS算法先将整个采样区域每个维度分成$N$份, 然后沿着对角线带抖动采样, 再将每个轴坐标进行随机进行排列。<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-16-16-57.png"></p>
-<p>具有良好的点分布，避免多维下分层采样随机数的聚集。</p>
-<h3 id="Halton序列"><a href="#Halton序列" class="headerlink" title="Halton序列"></a>Halton序列</h3><p>任意一个非负整数$a$都可以表示为$b$进制的一串数字$d_m(a)…d_2(a)d_1(a)$，Radical inverse函数$\phi_b$表示将数字串取反, 并在前面加上0.，变为</p>
-<p>$\phi_ba&#x3D;0.d_1(a)d_2(a)…d_m(a)$，非负整数转化为[0,1)小数，第<br>$i$位上的数字$d_i(a)$对Radical inverse的贡献值为$\frac{d_i(a)}{b^i}$。</p>
-<p>取$b&#x3D;2$，得到van der Corput 序列<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-16-49-57.png"></p>
-<p>要生成n维下的Halton序列, 我们只需要在每个维度上使用不同的基, 产生Radical Inverse序列即可. 因为每个维度上的基必须是互质的, 因此一个很自然的选择是使用前n个质数$p_n$作为每个维度的基:</p>
-<p>$x_a&#x3D;(\phi_2(a),\phi_3(a),…,\phi_{p_n}(a))$</p>
-<p>Halton序列不需要提前设定需要用到的采样点总个数, 序列前面的采样点总是良好分布的。</p>
-<p>当Halton中使用的基的值比较大时, 如果采样点较少, 会出现采样点聚集的情况。<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-16-57-04.png"></p>
-<p>scambling操作就是将 Halton的  进制表示中的每个数字进行一次重映射:</p>
-<p> $p$表示一个表示重映射的数字排列, 每个基使用一个不同的排列(第一位必须是0). 每个质数基对应的排列可以查表获取：<a target="_blank" rel="noopener" href="https://gruenschloss.org/">Leonhard Grünschloß</a></p>
-<h3 id="Hammersley序列"><a href="#Hammersley序列" class="headerlink" title="Hammersley序列"></a>Hammersley序列</h3><p>如果需要的采样点个数$N$是提前确定的, 则可以得到Hammersley序列:</p>
-<p>$x_a&#x3D;(\frac{a}{N},\phi_{b_1}(a),\phi_{b_2}(a),…,\phi_{b_n}(a))$</p>
-<h3 id="Sobol序列"><a href="#Sobol序列" class="headerlink" title="Sobol序列"></a>Sobol序列</h3><p>Sobol序列的每一个维度都是由底数为2的radical inversion组成，但每一个维度的radical inversion都有各自不同的矩阵。</p>
-<p>因为Sobol序列需要一个生成矩阵$C$，而且所有维度都以2为底，所以没有Halton那样在以比较大的数为底时需要用Scrambling来消除分布间的correlation这个问题。<a target="_blank" rel="noopener" href="http://web.maths.unsw.edu.au/~fkuo/sobol/">Sobol sequence generator </a>网站可生成矩阵。</p>
-<h2 id="Cross-Entropy-Sampling-交叉熵取样"><a href="#Cross-Entropy-Sampling-交叉熵取样" class="headerlink" title="Cross-Entropy Sampling 交叉熵取样"></a>Cross-Entropy Sampling 交叉熵取样</h2><h3 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h3><p>事件发生的概率越小，可获取的信息量越大，事件$x_0$的<strong>信息量</strong>是$I(x_0)&#x3D;−log(p(x_0))$</p>
-<p><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-17-15-19.png"></p>
-<p><strong>熵</strong>用来表示所有信息量的期望，即：</p>
-<p>$H(X)&#x3D;−\sum_{i&#x3D;1}^np(x_i)log(p(x_i))$</p>
-<p><strong>相对熵</strong>又称KL散度,如果我们对于同一个随机变量 x 有两个单独的概率分布 P(x) 和 Q(x)，我们可以使用 KL 散度（Kullback-Leibler (KL) divergence）来衡量这两个分布的差异<br>$n$为事件的所有可能性。$D$的值越小，表示$p$分布和$q$分布越接近。</p>
-<p>$D_{KL}(p||q)&#x3D;\sum_{j&#x3D;1}^np(x_j)ln\frac{p(x_j)}{q(x_j)}$</p>
-<p>交叉熵方法，与进化算法类似，进化算法在空间中按照某种规则撒点，获得每个点的误差，再根据这些误差信息决定下一轮撒点的规则。交叉熵方法从理论上来说目标是最小化随机撒点得到的数据分布与数据实际分布的交叉熵（等价于最小化KL距离），尽量使采样分布（撒的点）与实际情况同分布。<br>交叉熵（Cross Entropy）是Shannon信息论中一个重要概念，主要用于度量两个概率分布间的差异性信息。在信息论中，交叉熵是表示两个概率分布$p, q$的差异，其中$p$表示真实分布，$q$表示预测分布，那么$H(p,q)$就称为交叉熵：</p>
-<p>$H(p,q)&#x3D;\sum_ip_iln\frac{1}{q_i}&#x3D;-\sum_ip_ilnq_i$</p>
-<p>公式为KL公式变形后（$-H(p(x))+H(p,q)$）的后一部分，机器学习中需要评估标签值和预测值之间的差距，可使用KL散度，由于KL散度中的前一部分是p的熵不变，故在优化过程中，只需要关注交叉熵。所以一般在机器学习中直接用交叉熵做损失函数来评估模型。</p>
-<p>单个样本，$n$为分类个数：$loss&#x3D;-\sum_{j&#x3D;1}^ny_jlna_j$</p>
-<p>批量样本交叉熵，$m$为样本个数，$n$为分类个数：</p>
-<p>$J&#x3D;-\sum_{i&#x3D;1}^m\sum_{j&#x3D;1}^ny_{ij}lna_{ij}$</p>
-<p>首先从一个初始的高斯分布中取样参数w，对取样的参数计算函数f值大小<br>保留最大的几个样本，从这些样本中估计新的高斯分布的均值和方差，随后从新的分布中再次取样，迭代<br>f: 目标函数，从向量w到数值的映射，数值代表w的优秀程度</p>
-<h3 id="CEM-交叉熵方法"><a href="#CEM-交叉熵方法" class="headerlink" title="CEM 交叉熵方法"></a>CEM 交叉熵方法</h3><p>考虑估计一个期望，用朴素蒙特卡罗采样从真实概率密度函数$f(x;u)$中采样一些样本$x_i$<br>，然后计算$\frac{1}{n}\sum_nH(x_i)$，若事件$H(x)$发生的概率很小，那么朴素蒙特卡罗需要非常多的样本代价才能估计准这个期望；CEM算法则引入重要性采样(importance sampling)，从另一个类似的概率密度函数$f(x;v)$中进行采样，则期望计算变成：</p>
-<p>$\frac{1}{n}\sum_nH(x_i)W(z;u,v)$，$W(z;u,v)&#x3D;\frac{f(x;u)}{f(x,v)}$</p>
-<p>于是现在的目标变成了如何找到一个最优的采样函数$f(x,v)$去指导采样出一些少量的样本来准确地估计这个期望，CEM通过在每次迭代中找到较好的采样样本$x$来更新重要性函数的参数$v$(reference parameter)，目的是减小两个分布的差距，而这个差距是由KL散度来衡量的.</p>
-<p>详细论文：<a target="_blank" rel="noopener" href="https://dke.maastrichtuniversity.nl/m.winands/documents/crossmc.pdf">https://dke.maastrichtuniversity.nl/m.winands/documents/crossmc.pdf</a></p>
-<p>参考</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343666731">https://zhuanlan.zhihu.com/p/343666731</a></li>
-<li><a target="_blank" rel="noopener" href="https://microsoft.github.io/ai-edu/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E7%AC%AC1%E6%AD%A5%20-%20%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/03.2-%E4%BA%A4%E5%8F%89%E7%86%B5%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0.html">https://microsoft.github.io/ai-edu/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E7%AC%AC1%E6%AD%A5%20-%20%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/03.2-%E4%BA%A4%E5%8F%89%E7%86%B5%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://the0demiurge.blogspot.com/2017/08/cross-entropy-method-cem.html">https://the0demiurge.blogspot.com/2017/08/cross-entropy-method-cem.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cross-entropy_method">https://en.wikipedia.org/wiki/Cross-entropy_method</a></li>
-<li><a target="_blank" rel="noopener" href="https://web.maths.unsw.edu.au/~josefdick/MCQMC_Proceedings/MCQMC_Proceedings_2012_Preprints/100_Keller_tutorial.pdf">https://web.maths.unsw.edu.au/~josefdick/MCQMC_Proceedings/MCQMC_Proceedings_2012_Preprints/100_Keller_tutorial.pdf</a></li>
-</ul>
-<h1 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h1>
+          <p>采样方法的调研归纳，ML基础知识</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/1510c780/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -685,7 +650,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

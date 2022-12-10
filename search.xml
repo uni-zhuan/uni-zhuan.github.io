@@ -182,9 +182,11 @@
       </tags>
   </entry>
   <entry>
-    <title>取样算法调研</title>
+    <title>采样算法调研</title>
     <url>/posts/1510c780/</url>
-    <content><![CDATA[<h1 id="取样算法"><a href="#取样算法" class="headerlink" title="取样算法"></a>取样算法</h1><h2 id="Uniform-Random-Sampling-均匀随机取样"><a href="#Uniform-Random-Sampling-均匀随机取样" class="headerlink" title="Uniform Random Sampling 均匀随机取样"></a>Uniform Random Sampling 均匀随机取样</h2><p>生成[0,1]之间的伪随机数序列equal to均匀分布</p>
+    <content><![CDATA[<p>采样方法的调研归纳，ML基础知识</p>
+<span id="more"></span>
+<h1 id="取样算法"><a href="#取样算法" class="headerlink" title="取样算法"></a>取样算法</h1><h2 id="Uniform-Random-Sampling-均匀随机取样"><a href="#Uniform-Random-Sampling-均匀随机取样" class="headerlink" title="Uniform Random Sampling 均匀随机取样"></a>Uniform Random Sampling 均匀随机取样</h2><p>生成[0,1]之间的伪随机数序列equal to均匀分布</p>
 <h2 id="Low-Discrepancy-Sampling-低差异取样"><a href="#Low-Discrepancy-Sampling-低差异取样" class="headerlink" title="Low-Discrepancy Sampling 低差异取样"></a>Low-Discrepancy Sampling 低差异取样</h2><h3 id="Discrepancy（差异值）"><a href="#Discrepancy（差异值）" class="headerlink" title="Discrepancy（差异值）"></a>Discrepancy（差异值）</h3><p>衡量采样序列质量，描述采样点在采样空间内分布的均匀程度<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-15-58-43.png"></p>
 <p>$ D_N(P)&#x3D;\sup _{B\in J}|\frac{A(B)}{N}-\lambda_s(B)|$<br>对于一个在$[0,1]^n$空间中的点集，任意选取一个空间中的区域$B$，此区域内点的数量$A$和点集个数的总量$N$的比值和此区域的体积$\lambda_s$的差的绝对值的最大值，就是这个点集的Discrepancy。分布越均匀的点集，任意区域内的点集数量占点总数量的比例也会越接近于这个区域的体积。</p>
 <h3 id="LHS-x2F-Latin-hypercube-sampling算法"><a href="#LHS-x2F-Latin-hypercube-sampling算法" class="headerlink" title="LHS&#x2F;Latin hypercube sampling算法"></a>LHS&#x2F;Latin hypercube sampling算法</h3><p>多维算法，需要将采样空间按照维度进行分层。假设现在要采样$N$个点, LHS算法先将整个采样区域每个维度分成$N$份, 然后沿着对角线带抖动采样, 再将每个轴坐标进行随机进行排列。<br><img src="https://uninaruto.oss-cn-shanghai.aliyuncs.com/img/2022-12-10-16-16-57.png"></p>
@@ -233,8 +235,8 @@
       </categories>
       <tags>
         <tag>note</tag>
-        <tag>AI</tag>
         <tag>Runtime Verification</tag>
+        <tag>ML</tag>
       </tags>
   </entry>
 </search>
