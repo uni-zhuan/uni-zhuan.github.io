@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://uni-zhuan.github.io/posts/f166f40a/</loc>
+    
+    <lastmod>2022-12-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://uni-zhuan.github.io/posts/1510c780/</loc>
     
     <lastmod>2022-12-11</lastmod>
@@ -58,71 +67,85 @@
 
   <url>
     <loc>http://uni-zhuan.github.io/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://uni-zhuan.github.io/tags/AI/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <loc>http://uni-zhuan.github.io/tags/summary/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://uni-zhuan.github.io/tags/overview/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/note/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/Greek-Mythology/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/books/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/hexo/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/tags/oss/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <loc>http://uni-zhuan.github.io/tags/daily/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://uni-zhuan.github.io/tags/ML/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://uni-zhuan.github.io/tags/Runtime-Verification/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/note/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/Greek-Mythology/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/books/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/hexo/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/oss/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/AI/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/tags/overview/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -130,29 +153,36 @@
 
   
   <url>
-    <loc>http://uni-zhuan.github.io/categories/AI/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/categories/%E6%96%87%E5%AD%A6/</loc>
-    <lastmod>2022-12-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://uni-zhuan.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <loc>http://uni-zhuan.github.io/categories/Record/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://uni-zhuan.github.io/categories/Basic/</loc>
-    <lastmod>2022-12-11</lastmod>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/categories/%E6%96%87%E5%AD%A6/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://uni-zhuan.github.io/categories/AI/</loc>
+    <lastmod>2022-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
