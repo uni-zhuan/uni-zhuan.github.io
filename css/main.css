@@ -2763,6 +2763,17 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
+body:before {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/images/2326521.jpg") center 0 no-repeat;
+  background-size: cover;
+}
 .site-author-image {
   border: 2px solid rgba(0,0,0,0.25);
 }
